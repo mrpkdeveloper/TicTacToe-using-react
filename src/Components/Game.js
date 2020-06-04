@@ -3,6 +3,13 @@ import Board from './Board'
 
 export default function Game() {
     return (
-        <Board />
+        <div className="game">
+            <div className="game-board">
+                <Board />
+            </div>
+
+        </div>
+
+
     )
 }

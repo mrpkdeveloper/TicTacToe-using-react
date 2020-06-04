@@ -1,27 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+import Game from './Components/Game'
 import './App.css';
 
 //this is class based component (App is name of component)
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Welcome to Hello World
-        </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-        </a>
-        </header>
-      </div>
+      <Game />
     )
   }
 }

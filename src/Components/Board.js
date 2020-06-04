@@ -5,21 +5,21 @@ export default function Board() {
     return (
         //we put all row in single div as we cannot return multiple divs
         <div>
-            //first row
+            {/* first row */}
             <div className="border-row">
                 <Square />
                 <Square />
                 <Square />
             </div>
 
-            //second row
+            {/* //second row */}
             <div className="border-row">
                 <Square />
                 <Square />
                 <Square />
             </div>
 
-            //third row
+            {/* //third row */}
             <div className="border-row">
                 <Square />
                 <Square />
