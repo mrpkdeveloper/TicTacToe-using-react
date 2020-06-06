@@ -10,18 +10,18 @@ export default class Game extends React.Component {
             xisnext: true,
             stepnumber: 0,
             history: [
-                { square: Array(9).fill(null) }
+                { squares: Array(9).fill(null) }
             ]
         }
     }
 
-    handleclick = (i) => {
+    handleClick = (i) => {
         const history = this.state.history
         const current = history[history.length - 1]
-        const square = current.square
-        square[i] = this.state.xisnext ? 'x' : '0'
+        const squares = current.squares
+        squares[i] = this.state.xisnext ? 'x' : '0'
         this.setState({
-            history: history.concat({ square: square }),
+            history: history.concat({ squares: squares }),
             xisnext: this.state.xisnext,
             stepnumber: history.length
         })
@@ -29,10 +29,12 @@ export default class Game extends React.Component {
 
     }
     render() {
+        const history = this.state.history
+        const current = history[this.state.stepnumber]
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board />
+                    <Board clickAction={(i) => this.handleClick(i)} squares={current.squares} />
                 </div>
 
             </div>
