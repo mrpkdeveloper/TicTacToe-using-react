@@ -14,6 +14,8 @@ export default class Game extends React.Component {
             ]
         }
     }
+
+
     //let i be the index of input
     handleClick = (i) => {
         const history = this.state.history
@@ -34,8 +36,9 @@ export default class Game extends React.Component {
             stepnumber: history.length
         })
 
-
     }
+
+
     render() {
         const history = this.state.history
         const current = history[this.state.stepnumber]
